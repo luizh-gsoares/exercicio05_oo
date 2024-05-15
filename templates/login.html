@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Login usuário</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <form method="post" action="{{ url_for('login') }}">
+      <p>Qual seu nome?</p>
+      <input type="text" name="nome" />
+      <p>Qual sua senha?</p>
+      <input type="text" name="senha" />
+      <br><br>
+      <input type="submit" value="Login usuário"/>
+    </form>
+    
+    {% if mensagem %}
+    <p style="color: red;">{{ mensagem }} {{usuario_logado}}</p>
+    {% endif %}
+
+  </body>
+</html>
